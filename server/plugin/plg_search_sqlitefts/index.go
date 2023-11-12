@@ -17,7 +17,6 @@ const (
 func init() {
 	sh := SearchHint{}
 	Hooks.Register.SearchEngine(SqliteSearch{Hint: &sh})
-	Hooks.Register.AuthorisationMiddleware(&sh)
 }
 
 type SqliteSearch struct {
